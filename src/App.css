@@ -1,0 +1,138 @@
+/* ===== GLOBAL THEME ===== */
+body {
+  margin: 0;
+  background: #eef2f6; /* soft bluish gray */
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== APP CONTAINER ===== */
+.app-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #f7f9fc; /* soft card background */
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+/* ===== TITLE ===== */
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #111827;
+}
+
+/* ===== CONTROLS ===== */
+.controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* ===== INPUTS ===== */
+.path-input {
+  flex: 1;
+  min-width: 260px;
+  padding: 10px 12px;
+  border: 1px solid #d1d9e6;
+  border-radius: 8px;
+  background: #ffffff;
+  outline: none;
+  transition: 0.2s;
+}
+
+.path-input:focus {
+  border-color: #94a3b8;
+  box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.2);
+}
+
+.file-input {
+  padding: 8px;
+  border: 1px solid #d1d9e6;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #64748b; /* soft slate */
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: #475569;
+}
+
+.btn:disabled {
+  background: #a1a1aa;
+  cursor: not-allowed;
+}
+
+/* Export button slightly different tone */
+.export {
+  background: #0f766e; /* soft teal */
+}
+
+.export:hover {
+  background: #115e59;
+}
+
+/* ===== LOADING ===== */
+.loading {
+  margin: 10px 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+/* ===== TABLE ===== */
+.table-wrapper {
+  margin-top: 18px;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.data-table th {
+  background: #f1f5f9; /* soft header */
+  padding: 12px;
+  text-align: left;
+  font-size: 13px;
+  color: #334155;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.data-table td {
+  padding: 12px;
+  font-size: 13px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #1f2937;
+}
+
+.data-table tr:hover {
+  background: #f8fafc;
+}
+
+/* ===== HASH TEXT ===== */
+.mono {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: #0f172a;
+}
