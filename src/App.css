@@ -3,7 +3,7 @@ body {
   margin: 0;
   background: #eef2f6; /* soft bluish gray */
   color: #1f2937;
-  font-family: Arial, sans-serif;
+  font-family: Arial, "Noto Sans Devanagari", sans-serif;
 }
 
 /* ===== APP CONTAINER ===== */

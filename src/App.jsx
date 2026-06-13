@@ -1,5 +1,6 @@
 import { useState } from "react";
 import jsPDF from "jspdf";
+import { registerNotoFont } from "./fonts/file";
 import "./App.css";
 
 function App() {
@@ -63,7 +64,10 @@ function App() {
 
     let y = 20;
 
-    doc.setFont("courier");
+    // Unicode-friendly font
+
+    registerNotoFont(doc);
+    doc.setFont("NotoSans");
 
     doc.setFontSize(14);
     doc.text("SHA-256 HASH REPORT", 14, y);
@@ -88,7 +92,12 @@ function App() {
       }
 
       const hashLines = doc.splitTextToSize(item.hash, 90);
-      const pathLines = doc.splitTextToSize(item.fullPath, 90);
+
+      // IMPORTANT: Hindi-safe text
+      const pathLines = doc.splitTextToSize(
+        String(item.fullPath || item.relativePath),
+        90,
+      );
 
       doc.text(hashLines, 14, y);
       doc.text(pathLines, 110, y);
